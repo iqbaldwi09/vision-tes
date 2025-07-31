@@ -1,0 +1,88 @@
+{
+  "info": {
+    "name": "Vision Service API",
+    "_postman_id": "e98d1c32-6ac4-4c6e-8355-vision-clean-manual",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Create article",
+      "request": {
+        "method": "POST",
+        "header": [
+          { "key": "Content-Type", "value": "application/json" }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"title\": \"Analisa Pesawat Terbang: Struktur dan Mekanismenya\",\n  \"content\": \"Artikel ini mengulas bagaimana pesawat terbang dapat mengudara dan bermanuver dengan stabil. Mulai dari prinsip aerodinamika, seperti gaya angkat dan hambat, hingga fungsi utama bagian-bagian seperti sayap, ekor, dan mesin jet. Kami juga menjelaskan bagaimana kontrol dilakukan di kokpit, serta pentingnya sistem navigasi dan keselamatan dalam penerbangan modern. Artikel ini cocok untuk pembaca umum hingga mahasiswa teknik penerbangan.\",\n  \"category\": \"Aerospace\",\n  \"status\": \"publish\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:8080/article",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8080",
+          "path": ["article"]
+        }
+      }
+    },
+    {
+      "name": "Get all article",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "http://localhost:8080/articles",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8080",
+          "path": ["articles"]
+        }
+      }
+    },
+    {
+      "name": "Get article by id",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "http://localhost:8080/article/1",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8080",
+          "path": ["article", "1"]
+        }
+      }
+    },
+    {
+      "name": "Update article",
+      "request": {
+        "method": "PUT",
+        "header": [
+          { "key": "Content-Type", "value": "application/json" }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"title\": \"Update: Perkembangan Teknologi Penerbangan Modern\",\n  \"content\": \"Artikel ini telah diperbarui untuk menyoroti inovasi terbaru dalam teknologi penerbangan, termasuk material komposit ringan, sistem kontrol fly-by-wire, dan efisiensi bahan bakar. Kami juga membahas peran AI dalam maintenance prediktif dan bagaimana pesawat masa depan akan lebih ramah lingkungan serta otomatis. Sangat direkomendasikan bagi pelajar teknik dan profesional di industri kedirgantaraan.\",\n  \"category\": \"Aerospace\",\n  \"status\": \"draft\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:8080/article/1",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8080",
+          "path": ["article", "1"]
+        }
+      }
+    },
+    {
+      "name": "Delete article",
+      "request": {
+        "method": "DELETE",
+        "url": {
+          "raw": "http://localhost:8080/article/1",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8080",
+          "path": ["article", "1"]
+        }
+      }
+    }
+  ]
+}
